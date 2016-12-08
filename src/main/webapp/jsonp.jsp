@@ -8,7 +8,7 @@
     <button id="btn">jsonp</button>
     <script src="/static/js/jquery.js"></script>
     <script>
-        $(
+        $(function () {
             $("#btn").click(function () {
                 $.getJSON("/jsonp?method=?").done(function(data){
                     alert(data.name + " -> " + data.address);
@@ -18,8 +18,8 @@
               $.getJSON("/jsonp?method=?").done(function (data) {
                     alert(data.name + " -> " + data.address);
                 });
-            })
-        );
+            });
+        });
     </script>
 </body>
 </html>
